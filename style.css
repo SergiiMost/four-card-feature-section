@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap');
+
+:root{
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: rgb(84, 158, 242);
+  --dark-blue: hsl(234, 12%, 34%);
+  --greyish-blue: hsl(229, 6%, 66%);
+  --light-gray: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--light-gray);
+  line-height: 1.6;
+}
+
+/***** Wrappers *****/
+.body-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container-wrapper{
+  max-width: 144rem;
+  margin: 0 auto;
+}
+/***** Wrappers end *****/
+
+/***** Utils *****/
+.disable-margin-collapse{
+  display: flex;
+  flex-direction: column;
+}
+/***** Utils end *****/
+
+/***** Header section *****/
+header{
+  text-align: center;
+}
+
+.heading__main{
+  font-size: 3.2rem;
+  color: var(--dark-blue);
+  font-weight: 600;
+  margin-top: 6rem;
+}
+
+.heading-light{
+  font-weight: 200;
+}
+
+.heading__description{
+  color: var(--greyish-blue);
+  margin-top: 2rem;
+  max-width: 50rem;
+}
+/***** Header end *****/
+
+
+/***** Cards *****/
+.cards{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.card{
+  position: relative;
+  max-width: 38rem;
+  margin: 2rem;
+  padding: 2rem;
+  min-height: 25rem;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 4px 10px 10px rgba(163, 165, 174, 0.2),
+             -4px 10px 10px rgba(163, 165, 174, 0.2);
+}
+
+.card--red{
+  border-top: 5px solid var(--red);
+}
+
+.card--cyan{
+  border-top: 5px solid var(--cyan);
+}
+
+.card--orange{
+  border-top: 5px solid var(--orange);
+}
+
+.card--blue{
+  border-top: 5px solid var(--blue);
+}
+
+.card__heading{
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem 0;
+}
+
+.card__text{
+  color: var(--greyish-blue);
+}
+
+.card__svg{
+  position: absolute;
+  bottom: 2.5rem;
+  right: 2.5rem;
+}
+/***** Cards end *****/
+
+/***** Footer section*****/
+.attribution__text{
+  font-size: 1.2rem; 
+  text-align: center; 
+  padding: 2rem 0;
+}
+
+/***** Footer end *****/
+
+/***** Media queries *****/
+@media screen and (max-width:750px){
+
+  html{
+    font-size: 56.25%;
+  }
+
+  .heading__main{
+    font-size: 2.6rem;
+  }
+
+  .heading__description{
+    text-align: justify;
+    padding: 0 2rem;
+    max-width: 35rem;
+    margin-bottom: 4rem;
+  }
+
+  .cards{
+    margin-top: rem;
+    flex-direction: column;
+  }
+}
+
+/***** Media queries end *****/
